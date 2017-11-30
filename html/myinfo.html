@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--부트스트랩-->
+	<link rel="Stylesheet" href="css/bootstrap.min.css" />
+   <link type = "text/css" rel="stylesheet" href = "forall.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<title>내 정보 수정</title>
+
+	<style>
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+body { margin: 0; }
+.title{
+  text-align: center;
+  
+  margin-bottom: 50px;
+}
+form{
+  margin-top: 30px;
+}
+form .field-group{
+  display: flex; 
+  margin: 20px 0 12px 210px;
+}
+form .field-group .label{
+  flex: 1; 
+  text-align: right; 
+  margin: 0 8px 0 0;
+  padding: 2px 0;
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  /*border: 1px solid red;*/
+}
+form .field-group .field{
+
+  flex: 3;
+  color: #009dd1;
+}
+form .field-group:last-child{
+
+  display: flex;
+  justify-content: flex-end;
+}
+form .field-group:last-child .field{
+  max-width: 75%;
+}
+input, select, textarea{
+  padding: .6rem 1rem; 
+  font-size: 1.6rem; 
+  border: solid 1px #eee;
+  background: #fff; 
+  box-sizing: border-box;
+}
+textarea {
+  width: 70%;  
+}
+
+input[type="submit"] {
+  margin-left: 370px;
+  background-color:  #fcda50;
+  border: none;
+  border-radius: 3px;
+  color: #f4f4f4;
+  cursor: pointer;
+  font-family: inherit;
+  height: 50px;
+  text-transform: uppercase;
+  width: 300px;
+  -webkit-appearance:none;
+  margin-top: 80px;
+}
+
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+	<ul class="navbar">
+  		<li><a href="superadmin.html"><img src="로고.png" height="50"></a></li>
+  		<li style="float: right"><a href="#">logout</a></li>
+	</ul>
+	<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:300px;">
+  		<a href="cctv.php" class="w3-bar-item w3-button">CCTV 관리</a>
+		<a href="manageadmin.php" class="w3-bar-item w3-button">일반 관리자 관리</a>
+		<a href="" class="w3-bar-item w3-button">촬영 영상, 메타로그 파일 관리</a>
+		<a href="" class="w3-bar-item w3-button">이웃 공간 관리</a>
+		<a href="" class="w3-bar-item w3-button">공간 시퀀스 관리</a>
+		<a href="" class="w3-bar-item w3-button">내정보 관리</a>
+	</div>
+	<div class="content">
+
+
+
+ <form name="form1" action="signup.php" method="post" onsubmit="return Login();">  
+<div class="title">
+  관리자 ID 의 정보를 변경합니다.
+</div>
+  <div class="field-group">
+     <label class="label">ID:</label>
+     <div class="field">
+       <input name="ID" type="text"  value="" placeholder="ID" required>
+     </div>
+   </div>
+   <div class="field-group">
+     <label class="label">Password:</label>
+     <div class="field">
+       <input name="password" type="text"  value="" placeholder="password" required>
+     </div>
+   </div>
+   <div class="field-group">
+     <label class="label">이름:</label>
+     <div class="field">
+       <input name="name" type="text"  value="" placeholder="name" required>
+     </div>
+   </div>
+   <div class="field-group">
+     <label class="label">직책:</label>
+     <div class="field">
+       <input name="position" type="text"  value="" placeholder="position" required>
+     </div>
+   </div>
+   <div class="field-group">
+     <label class="label">휴대전화:</label>
+     <div class="field">
+       <input name="phonenum" type="text"  value="" placeholder="phonenum" required>
+     </div>
+   </div>
+  <div>
+     <div>
+       <input name="changeinfo" type="submit" value="Submit">
+     </div>
+   </div>
+
+  </form>
+
+
+
+<!--		
+            <form class="form-horizontal" action="myinfo.php" method="post">
+            <div class="form-inline col-sm-12">
+                <label for="ID" class="control-label">ID</label>
+                <div>
+                    <input type="text" name="ID" class="form-control" id="ID" placeholder="ID">
+                </div>
+            </div>
+            <div class="form-inline col-sm-12">
+                <label for="Password" class="control-label">Password</label>
+                <div>
+                    <input type="text" name="Password" class="form-control" id="Password">
+                </div>
+            </div>
+            <div class="form-inline col-sm-12">
+                <label for="Name" class="control-label">Manager ID</label>
+                <div>
+                    <input type="text" name="Name" class="form-control" id="Name" placeholder="Name">
+                </div>
+            </div>
+            <div class="form-inline col-sm-12">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="submit" class="btn btn-default" value="정보 변경"/>
+                </div>
+            </div>
+            </form>-->
+		
+	</div>
+
+</body>
+</html>
