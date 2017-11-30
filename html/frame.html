@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--부트스트랩-->
+    <link rel="Stylesheet" href="css/bootstrap.min.css" />
+     <link type = "text/css" rel="stylesheet" href = "forall.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> 
+    <title>관리자 관리</title>
+
+<style>
+
+    
+body { margin: 0; }
+.search_{
+ /* border: 1px solid red;*/
+  margin-top: 20px;
+  width: 90%;
+  margin-left: 5%;
+
+
+}
+form{
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+select {
+  width: 150px;
+  height: 35px;
+  margin: 0;
+  padding: 0 0 0 .5em;
+
+  cursor: pointer;
+}
+h2 {
+  text-align: center;
+}
+.table-responsive{
+  /*border: 1px solid red;*/
+  width: 95%;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+table caption {
+  padding: .5em 0;
+  /*border: 1px solid red;*/
+}
+
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+
+<body>
+    <ul class="navbar">
+        <li><a href="superadmin.html"><img src="로고.png" height="50"></a></li>
+        <li style="float: right"><a href="#">logout</a></li>
+    </ul>
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:300px;">
+        <a href="cctv.php" class="w3-bar-item w3-button">CCTV 관리</a>
+        <a href="manageadmin.php" class="w3-bar-item w3-button">일반 관리자 관리</a>
+        <a href="" class="w3-bar-item w3-button">촬영 영상, 메타로그 파일 관리</a>
+        <a href="" class="w3-bar-item w3-button">이웃 공간 관리</a>
+        <a href="" class="w3-bar-item w3-button">공간 시퀀스 관리</a>
+        <a href="" class="w3-bar-item w3-button">내정보 관리</a>
+    </div>
+    <div class="content"> 
+
+      <div class="search_">
+          <form>
+            <select class="form-control" name="search_type" style="display: inline; width:130px;" id="selectBox">
+              <option value="name">이름</option>
+              <option value="id">ID</option>
+              <option value="position">직책</option>
+              <option value="phone_num">휴대전화</option>
+              <option value="assigned_cctv">할당CCTV</option>
+            </select>
+                <!--<div class="input-group-btn search-panel" data-search="students" >
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      <span class="search_by">Filter by</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a data-search="students">students</a></li>
+                      <li><a data-search="teachers">teachers</a></li>
+                      <li><a data-search="rooms">rooms</a></li>
+                      <li class="divider"></li>
+                      <li><a data-search="all">all</a></li>
+                    </ul>
+                </div>   -->
+                <input class="form-control" style="display: inline; height: 33px; width: 600px;" type="text" name="searchvalue" id="searchvalue" placeholder="Search Item.."  >
+                
+                <input type="button" class="btn btn-default" style="display: inline;" value="검색" onclick="search()" >
+                <input type="button" class="btn btn-default" style="display: inline; " value="관리자 추가"  >
+              </form>
+            </div>
+           
+
+
+ <div class="table-responsive" >
+        <table summary="This table shows how to create responsive tables using Bootstrap's default functionality" class="table table-bordered table-hover">
+          <caption class="text-center">Qurey Result </caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>ID</th>
+              <th>Position</th>
+              <th>Phone number</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>이름예시</td>
+              <td>아이디예에에에에시</td>
+              <td>일아러남ㄹ</td>
+              <td>ㅇㄹㄴㅁㄹ</td>
+              <td>
+                <form>
+                  <input type="button" class="btn btn-default btn-sm" style="display: inline;" value="수정" >
+                  <input type="button" class="btn btn-default btn-sm " style="display: inline;" value="삭제">
+                </form>
+
+              </td>
+            </tr>
+            <tr>
+              <td>이름예시</td>
+              <td>아이디예에에에에시</td>
+              <td>일아러남ㄹ</td>
+              <td>ㅇㄹㄴㅁㄹ</td>
+              <td>
+                <form>
+                  <input type="button" class="btn btn-default btn-sm" style="display: inline;" value="수정" >
+
+                  <input type="button" class="btn btn-default btn-sm" style="display: inline;" value="삭제" >
+                </form>
+
+              </td>
+            </tr><tr>
+              <td>이름예시</td>
+              <td>아이디예에에에에시</td>
+              <td>일아러남ㄹ</td>
+              <td>ㅇㄹㄴㅁㄹ</td>
+              <td width="120px" nowrap >
+                <form>
+                  <input type="button" class="btn btn-default btn-sm" style="display: inline;" value="수정">
+
+                  <input type="button" class="btn btn-default btn-sm" style="display: inline;" value="삭제">
+                </form>
+
+              </td>
+            </tr><tr>
+              <td>이름예시</td>
+              <td>아이디예에에에에시</td>
+              <td>일아러남ㄹ</td>
+              <td>ㅇㄹㄴㅁㄹ</td>
+              <td>
+                <form>
+                  <input type="button" class="btn btn-default btn-sm" style="display: inline;" value="수정" >
+                  <input type="button" class="btn btn-default btn-sm" style="display: inline;" value="삭제" >
+                </form>
+
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="5" class="text-center">Data retrieved from CCTV management DB</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+
+
+    </div>
+
+
+</body>
+</html>
