@@ -67,6 +67,11 @@
             // body...
         }
     </script>
+    <script type="text/javascript">
+        function search(){
+            document.getElementById('text').innerHTML = "";
+        }
+    </script>
 
         <style>
 body { margin: 0; }
@@ -126,7 +131,7 @@ body { margin: 0; }
     <div id="wrapper">
         <hr>
         <div>
-            <form class="form-horizontal" action="includecctv.php" method="post">
+            <form class="form-horizontal" action="" method="post">
             <div class="form-group">
                 <label for="Name" class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-7">
@@ -147,7 +152,7 @@ body { margin: 0; }
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <input type="submit" class="btn btn-default" ></button>
+                    <input type="button" class="btn btn-default" onclick="search()" ></button>
                 </div>
             </div>
         </form>

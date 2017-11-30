@@ -14,29 +14,11 @@
 
     
 body { margin: 0; }
-.search_{
+.searchtable{
  /* border: 1px solid red;*/
   margin-top: 20px;
   width: 90%;
   margin-left: 5%;
-
-
-}
-form{
-    padding-top: 5px;
-    padding-bottom: 5px;
-
-}
-select {
-  width: 150px;
-  height: 35px;
-  margin: 0;
-  padding: 0 0 0 .5em;
-
-  cursor: pointer;
-}
-h2 {
-  text-align: center;
 }
 .table-responsive{
   /*border: 1px solid red;*/
@@ -44,23 +26,6 @@ h2 {
   margin-left: 10px;
   margin-top: 20px;
 }
-table caption {
-  padding: .5em 0;
-  /*border: 1px solid red;*/
-}
-
-@media screen and (max-width: 767px) {
-  table caption {
-    border-bottom: 1px solid #ddd;
-  }
-}
-
-.p {
-  text-align: center;
-  padding-top: 140px;
-  font-size: 14px;
-}
-
 </style>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -81,7 +46,7 @@ table caption {
     </div>
     <div class="content"> 
 
-      <div class="search_">
+      <div class="searchtable">
           <form>
             <select class="form-control" name="search_type" style="display: inline; width:130px;" id="selectBox">
               <option value="name">이름</option>
@@ -90,18 +55,6 @@ table caption {
               <option value="phone_num">휴대전화</option>
               <option value="assigned_cctv">할당CCTV</option>
             </select>
-                <!--<div class="input-group-btn search-panel" data-search="students" >
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                      <span class="search_by">Filter by</span> <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a data-search="students">students</a></li>
-                      <li><a data-search="teachers">teachers</a></li>
-                      <li><a data-search="rooms">rooms</a></li>
-                      <li class="divider"></li>
-                      <li><a data-search="all">all</a></li>
-                    </ul>
-                </div>   -->
                 <input class="form-control" style="display: inline; height: 33px; width: 600px;" type="text" name="searchvalue" id="searchvalue" placeholder="Search Item.."  >
                 
                 <input type="button" class="btn btn-default" style="display: inline;" value="검색" onclick="search()" >

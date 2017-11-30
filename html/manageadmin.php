@@ -60,7 +60,7 @@
             '           <input type="radio" name="option" value="modify">변경</label>' +
             '        <label class="radio-inline">' +
             '           <input type="radio" name="option" value="delete">삭제</label></td>' +
-            '           <td><input type="submit" class="btn btn-default" value="확인"></td>' +
+            '           <td><input type="submit" class="btn btn-default"></td>' +
             '   </form>'+
             '    </tr>' ;
         }
@@ -104,9 +104,7 @@
             '           <input type="radio" name="option" value="modify">변경</label>' +
             '        <label class="radio-inline">' +
             '           <input type="radio" name="option" value="delete">삭제</label></td>' +
-            '           <td><input type="submit" class="btn btn-default" value="확인"></td>' +
-            '    </tr>' +
-            '    <tr>'+
+            '           <td><input type="submit" class="btn btn-default"></td>' +
             '   </form>'+
             '    </tr>' ;
         }

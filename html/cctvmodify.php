@@ -7,7 +7,7 @@
     <link rel="Stylesheet" href="css/bootstrap.min.css" />
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/bootstrap.min.js"></script> 
-    <title>관리자 관리</title>
+    <title>CCTV 수정</title>
 
     <?php
     $conn = mysqli_connect("localhost", "dbseong", "sorry119", "dbseong");
@@ -23,46 +23,14 @@
     }
     $select_query = "SELECT * FROM ADMIN";
     $result = mysqli_query($conn, $select_query);
-    while($row = mysqli_fetch_assoc($result))
-    {
-        if($row['pos']==='Super') continue;
-        $ID[] = $row['ID'];
-        $Password[] = $row['password'];
-        $Name[] = $row['name'];
-        $Address[] = $row['pos'];
-        $Phonenumber[] = $row['phone_num'];
+    
 
-    }
+
+
     mysqli_close($conn);
     ?>
     <script type="text/javascript">
-        var ID = <?= json_encode($ID)?>;
-        var Password = <?= json_encode($Password) ?>;
-        var Name = <?= json_encode($Name) ?>;
-        var Phonenumber = <?= json_encode($Phonenumber) ?>;
-        var content = 
-        '<div>';
-        for(var i = 0; i < ID.length; i++) {
-            content += 
-            '   <form action="action_page_superadmin.php" method="POST">' +
-            '   <table class="table table table-hover table-bordered">' +
-            '    <tr>'+
-            '        <td>' + ID[i] + '</td> '+
-            '        <td>' + Password[i] + '</td> '+
-            '        <td>' + Name[i] + '</td> '+
-            '        <td>' + Phonenumber[i] + '</td> '+
-            '      <input type="hidden" name="userID" value="' + ID[i] + '" />' +
-            '        <td><label class="radio-inline">' +
-            '           <input type="radio" name="option" value="delete">삭제</label>' +
-            '           <input type="submit" class="btn btn-default"></td>' +
-            '    </tr>' +
-            '    <tr>'+
-            '    </tr>' +
-            '   </table>' +
-            '   </form>';
-        }
-        content += 
-        '</div>';
+        
         window.onload =function(){
             document.getElementById('text').innerHTML = content;
             // body...
@@ -142,8 +110,7 @@ body { margin: 0; }
 
 
 
-        <div id="wrapper" style="padding-top: 15px;">
-            <div id="text"></div></div>
+        
     </div>
   </div>
 </body>

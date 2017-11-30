@@ -29,12 +29,7 @@ if($option == "delete") {
 }
 else if($option == "insert") {
 	echo $option;
-	$ID = $_POST['ID']
-	$pw = $_POST['pw']
-	$name = $_POST['name']
-	$position = $_POST['position']
-	$phone = $_POST['phone']
-	$sql = "INSERT INTO ADMIN VALUES (\"$ID\", \"$pw\", \"$name\", \"$position\", \"$phone\");";
+	$sql = "INSET INTO ADMIN VALUES (\"$ID\", \"$pw\", \"$name\", \"$position\", \"$phone\");";
 	$result = mysqli_query($conn, $sql);
 	mysqli_close($conn);
 	if($result === TRUE) {
@@ -46,20 +41,14 @@ else if($option == "insert") {
 }
 else if($option == "modify") {
 	echo $option;
-	$sql = "DELETE FROM ADMIN WHERE ID = \"$userID\";";
+	$sql = "INSET INTO ADMIN VALUES (\"$ID\", \"$pw\", \"$name\", \"$position\", \"$phone\");";
 	$result = mysqli_query($conn, $sql);
 	mysqli_close($conn);
 	if($result === TRUE) {
-		$ID = $_POST['ID']
-		$pw = $_POST['pw']
-		$name = $_POST['name']
-		$position = $_POST['position']
-		$phone = $_POST['phone']
-		$sql = "INSERT INTO ADMIN VALUES (\"$ID\", \"$pw\", \"$name\", \"$position\", \"$phone\");"
-		echo("<script>alert('변경 완료.');</script>"); 
+		echo("<script>alert('추가 완료.');</script>"); 
 		echo "<meta http-equiv='refresh' content='0; url=manageadmin.php'>";
 	}else {
-		echo("<script>alert('변경 실패.');</script>"); 
+		echo("<script>alert('추가 실패.');</script>"); 
 	}
 }
 ?>
